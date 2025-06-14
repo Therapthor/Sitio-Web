@@ -1,0 +1,96 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.store-name {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.contact-btn {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background-color: #dc3545;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.contact-btn:hover {
+    background-color: #c82333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.product {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.product:hover {
+    transform: translateY(-4px);
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product h2 {
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+}
+
+.product p {
+    padding: 0 1rem 1rem;
+    font-size: 0.9rem;
+}
+
+.precio {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #28a745;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+footer {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #222;
+    color: #fff;
+}
