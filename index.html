@@ -211,6 +211,24 @@
       font-size: 0.95rem;
       color: #ccc;
     }
+
+    .redes-sociales {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .icono-red {
+      width: 32px;
+      height: 32px;
+      filter: brightness(0) saturate(100%) invert(46%) sepia(72%) saturate(6050%) hue-rotate(340deg) brightness(95%) contrast(101%);
+      transition: transform 0.2s;
+    }
+
+    .icono-red:hover {
+      transform: scale(1.1);
+    }
   </style>
 </head>
 <body>
@@ -225,102 +243,27 @@
   <section class="productos">
     <h1>Cuentas Streaming</h1>
     <div class="grid">
-      <div class="producto">
-        <img src="crunchyroll.jpg" alt="Crunchyroll" />
-        <h2>Crunchyroll MegaFan - Completa</h2>
-        <p>Cuenta para 5 perfiles. Renovable y garantizada.</p>
-        <span class="precio">s/10</span>
-      </div>
-      <div class="producto">
-        <img src="paramount.jpg" alt="Paramount" />
-        <h2>Paramount+ - Completa</h2>
-        <p>Cuenta válida, con soporte.</p>
-        <span class="precio">s/10</span>
-      </div>
-      <div class="producto">
-        <img src="prime.png" alt="Amazon Prime" />
-        <h2>Amazon Prime - Completa</h2>
-        <p>Cuenta oficial para uso personal o reventa.</p>
-        <span class="precio">s/12</span>
-      </div>
-      <div class="producto">
-        <img src="max.jpeg" alt="HBO Max" />
-        <h2>HBO Max - Completa</h2>
-        <p>Cuenta completa, 5 perfiles. Soporte incluido.</p>
-        <span class="precio">s/12</span>
-      </div>
-      <div class="producto">
-        <img src="disneylogo.jpg" alt="Disney+" />
-        <h2>Disney+ Estándar - Completa</h2>
-        <p>Compatible con dispositivos, renovable.</p>
-        <span class="precio">s/16</span>
-      </div>
-      <div class="producto">
-        <img src="netflix.jpg" alt="Netflix" />
-        <h2>Netflix 4K Premium - Completa</h2>
-        <p>Cuenta profesional, lista para reventa.</p>
-        <span class="precio">s/35</span>
-      </div>
-      <div class="producto">
-        <img src="spotify.jpg" alt="Spotify" />
-        <h2>Spotify Premium</h2>
-        <p>Cuenta con renovación activa y soporte.</p>
-        <span class="precio">s/8</span>
-      </div>
-      <div class="producto">
-        <img src="youtubepremiun.png" alt="YouTube" />
-        <h2>YouTube Premium (Invitación)</h2>
-        <p>Se entrega mediante enlace especial.</p>
-        <span class="precio">s/10</span>
-      </div>
-      <div class="producto">
-        <img src="canvapro.png" alt="Canva" />
-        <h2>Canva Pro Anual</h2>
-        <p>Cuenta anual para diseño profesional.</p>
-        <span class="precio">s/15</span>
-      </div>
-      <div class="producto">
-        <img src="adobeeee.jpg" alt="Adobe" />
-        <h2>Adobe Creative Cloud</h2>
-        <p>Cuenta completa con apps Adobe 2024.</p>
-        <span class="precio">s/25</span>
-      </div>
-      <div class="producto">
-        <img src="chatgptuser.jpg" alt="ChatGPT" />
-        <h2>ChatGPT a Dominio</h2>
-        <p>Cuenta con dominio personalizado.</p>
-        <span class="precio">s/12</span>
-      </div>
+      <div class="producto"><img src="crunchyroll.jpg" alt="Crunchyroll" /><h2>Crunchyroll MegaFan - Completa</h2><p>Cuenta para 5 perfiles. Renovable y garantizada.</p><span class="precio">s/10</span></div>
+      <div class="producto"><img src="paramount.jpg" alt="Paramount" /><h2>Paramount+ - Completa</h2><p>Cuenta válida, con soporte.</p><span class="precio">s/10</span></div>
+      <div class="producto"><img src="prime.png" alt="Amazon Prime" /><h2>Amazon Prime - Completa</h2><p>Cuenta oficial para uso personal o reventa.</p><span class="precio">s/12</span></div>
+      <div class="producto"><img src="max.jpeg" alt="HBO Max" /><h2>HBO Max - Completa</h2><p>Cuenta completa, 5 perfiles. Soporte incluido.</p><span class="precio">s/12</span></div>
+      <div class="producto"><img src="disneylogo.jpg" alt="Disney+" /><h2>Disney+ Estándar - Completa</h2><p>Compatible con dispositivos, renovable.</p><span class="precio">s/16</span></div>
+      <div class="producto"><img src="netflix.jpg" alt="Netflix" /><h2>Netflix 4K Premium - Completa</h2><p>Cuenta profesional, lista para reventa.</p><span class="precio">s/35</span></div>
+      <div class="producto"><img src="spotify.jpg" alt="Spotify" /><h2>Spotify Premium</h2><p>Cuenta con renovación activa y soporte.</p><span class="precio">s/8</span></div>
+      <div class="producto"><img src="youtubepremiun.png" alt="YouTube" /><h2>YouTube Premium (Invitación)</h2><p>Se entrega mediante enlace especial.</p><span class="precio">s/10</span></div>
+      <div class="producto"><img src="canvapro.png" alt="Canva" /><h2>Canva Pro Anual</h2><p>Cuenta anual para diseño profesional.</p><span class="precio">s/15</span></div>
+      <div class="producto"><img src="adobeeee.jpg" alt="Adobe" /><h2>Adobe Creative Cloud</h2><p>Cuenta completa con apps Adobe 2024.</p><span class="precio">s/25</span></div>
+      <div class="producto"><img src="chatgptuser.jpg" alt="ChatGPT" /><h2>ChatGPT a Dominio</h2><p>Cuenta con dominio personalizado.</p><span class="precio">s/12</span></div>
     </div>
   </section>
 
   <section class="productos">
     <h1>Servicios Extras</h1>
     <div class="grid">
-      <div class="producto">
-        <img src="descansoo.png" alt="Descanso Médico" />
-        <h2>Descanso Médico (Subido a Sistema)</h2>
-        <p>Documento válido en sistema nacional, además se envia receta.</p>
-        <span class="precio">s/18</span>
-      </div>
-      <div class="producto">
-        <img src="cineplanet.png" alt="Cineplanet" />
-        <h2>Cineplanet 40% DCTO</h2>
-        <p>Aplicable desde s/140 en compras.</p>
-        <span class="precio">s/140 mínimo</span>
-      </div>
-      <div class="producto">
-        <img src="prov.png" alt="Proveedores" />
-        <h2>Lista (3) Proveedores de Cuentas</h2>
-        <p>Top fuentes confiables de streaming.</p>
-        <span class="precio">s/60</span>
-      </div>
-      <div class="producto">
-        <img src="bins.jpg" alt="Herramientas Binero" />
-        <h2>Herramientas Binero</h2>
-        <p>Checkers, grupos de BINS y scraper.</p>
-        <span class="precio">s/30</span>
-      </div>
+      <div class="producto"><img src="descansoo.png" alt="Descanso Médico" /><h2>Descanso Médico (Subido a Sistema)</h2><p>Documento válido en sistema nacional, además se envia receta.</p><span class="precio">s/18</span></div>
+      <div class="producto"><img src="cineplanet.png" alt="Cineplanet" /><h2>Cineplanet 40% DCTO</h2><p>Aplicable desde s/140 en compras.</p><span class="precio">s/140 mínimo</span></div>
+      <div class="producto"><img src="prov.png" alt="Proveedores" /><h2>Lista (3) Proveedores de Cuentas</h2><p>Top fuentes confiables de streaming.</p><span class="precio">s/60</span></div>
+      <div class="producto"><img src="bins.jpg" alt="Herramientas Binero" /><h2>Herramientas Binero</h2><p>Checkers, grupos de BINS y scraper.</p><span class="precio">s/30</span></div>
     </div>
   </section>
 
@@ -345,17 +288,17 @@
 
   <footer>
     <p>© 2025 Liordark. Todos los derechos reservados.</p>
- <div class="redes-sociales">
-    <a href="https://t.me/liordark" target="_blank" aria-label="Telegram">
-      <img src="https://www.svgrepo.com/show/343522/telegram-communication-chat-interaction-network-connection.svg" alt="Telegram" class="icono-red" />
-    </a>
-    <a href="https://www.tiktok.com/@liordark0" target="_blank" aria-label="TikTok">
-      <img src="icons/tiktok.svg" alt="TikTok" class="icono-red" />
-    </a>
-    <a href="http://wa.me/51963081436" target="_blank" aria-label="WhatsApp">
-      <img src="icons/whatsapp.svg" alt="WhatsApp" class="icono-red" />
-    </a>
-  </div>
+    <div class="redes-sociales">
+      <a href="https://t.me/liordark" target="_blank" aria-label="Telegram">
+        <img src="https://www.svgrepo.com/show/343522/telegram-communication-chat-interaction-network-connection.svg" alt="Telegram" class="icono-red" />
+      </a>
+      <a href="https://www.tiktok.com/@liordark0" target="_blank" aria-label="TikTok">
+        <img src="https://www.svgrepo.com/show/303261/tiktok-logo-logo.svg" alt="TikTok" class="icono-red" />
+      </a>
+      <a href="http://wa.me/51963081436" target="_blank" aria-label="WhatsApp">
+        <img src="https://www.svgrepo.com/show/353644/whatsapp-icon.svg" alt="WhatsApp" class="icono-red" />
+      </a>
+    </div>
   </footer>
 </body>
 </html>
