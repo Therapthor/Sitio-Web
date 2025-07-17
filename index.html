@@ -4,27 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Liordark - Tienda Virtual</title>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    integrity="sha512-..."
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     :root {
-      --primary: #007bff;
-      --primary-hover: #0056b3;
-      --price: #27ae60;
-      --bg: #f4f4f4;
-      --text: #333;
-      --card-bg: #fff;
+      --bg: #121212;
+      --card: #1e1e1e;
+      --text: #f0f0f0;
+      --accent: #ff3c3c;
+      --accent-hover: #e02727;
+      --price: #ff4f4f;
+    }
+
+    * {
+      box-sizing: border-box;
     }
 
     body {
-      font-family: "Segoe UI", Tahoma, sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
       background-color: var(--bg);
       color: var(--text);
     }
@@ -33,12 +30,12 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: var(--card-bg);
+      background: var(--card);
       padding: 15px 30px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 1000;
     }
 
     .logo-container {
@@ -47,29 +44,31 @@
     }
 
     .logo {
-      width: 40px;
+      width: 45px;
+      height: 45px;
       margin-right: 12px;
       border-radius: 50%;
+      object-fit: cover;
     }
 
     .store-name {
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: var(--text);
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: var(--accent);
     }
 
     .contact-btn {
-      background: var(--primary);
+      background-color: var(--accent);
       color: #fff;
       padding: 10px 18px;
       border-radius: 5px;
       text-decoration: none;
       font-weight: 500;
-      transition: background 0.3s;
+      transition: background 0.3s ease;
     }
 
     .contact-btn:hover {
-      background: var(--primary-hover);
+      background-color: var(--accent-hover);
     }
 
     .productos {
@@ -82,6 +81,7 @@
     .productos h1 {
       font-size: 2rem;
       margin-bottom: 30px;
+      color: var(--accent);
     }
 
     .grid {
@@ -91,24 +91,23 @@
     }
 
     .producto {
-      background: var(--card-bg);
+      background: var(--card);
       border-radius: 10px;
       padding: 15px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
-      text-align: left;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
       display: flex;
       flex-direction: column;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
     }
 
     .producto:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 10px 30px rgba(255, 60, 60, 0.3);
     }
 
     .producto img {
       width: 100%;
-      height: 150px;
+      height: 160px;
       object-fit: cover;
       border-radius: 6px;
       margin-bottom: 12px;
@@ -116,13 +115,14 @@
 
     .producto h2 {
       font-size: 1.1rem;
-      margin-bottom: 8px;
+      margin: 10px 0 6px;
     }
 
     .producto p {
-      font-size: 0.92rem;
-      margin-bottom: 12px;
+      font-size: 0.95rem;
       flex-grow: 1;
+      color: #ccc;
+      margin-bottom: 12px;
     }
 
     .precio {
@@ -132,10 +132,10 @@
     }
 
     footer {
-      background: #fff;
+      background: var(--card);
       padding: 20px;
       text-align: center;
-      border-top: 1px solid #ddd;
+      border-top: 1px solid #2c2c2c;
       margin-top: 40px;
     }
 
@@ -144,55 +144,81 @@
     }
 
     .social-icons a {
-      margin: 0 8px;
-      color: #555;
-      font-size: 1.2rem;
+      margin: 0 10px;
+      color: #aaa;
+      font-size: 1.3rem;
       transition: color 0.3s;
     }
 
     .social-icons a:hover {
-      color: var(--primary);
+      color: var(--accent);
     }
 
     @media (max-width: 600px) {
       .store-name {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
       }
 
       .contact-btn {
-        padding: 8px 14px;
         font-size: 0.9rem;
+        padding: 8px 14px;
+      }
+
+      .producto img {
+        height: 140px;
       }
     }
   </style>
 </head>
 <body>
+
   <header>
     <div class="logo-container">
-      <img src="photo_2025-06-13_20-59-28.jpg" alt="Logo Liordark" class="logo" />
+      <img src="logo-liordark.jpg" alt="Logo Liordark" class="logo" />
       <span class="store-name">Liordark</span>
     </div>
     <a href="https://t.me/liordark" class="contact-btn">Contacto</a>
   </header>
 
   <section class="productos">
-    <h1>Tienda Virtual</h1>
+    <h1>Servicios Digitales</h1>
     <div class="grid">
       <div class="producto">
         <img src="max.jpeg" alt="HBO Max" />
-        <h2>HBO Max - Cuenta Completa</h2>
-        <p>Cuenta con 5 perfiles, preparada para reventa y renovación. Incluye garantía y soporte.</p>
-        <span class="precio">S/ 10 soles</span>
+        <h2>HBO Max - Completa</h2>
+        <p>Cuenta completa lista para reventa y renovación.</p>
+        <span class="precio">S/12</span>
       </div>
-
       <div class="producto">
         <img src="crunchyroll.jpg" alt="Crunchyroll" />
-        <h2>Crunchyroll - Cuenta Completa</h2>
-        <p>Cuenta con 5 perfiles, preparada para reventa y renovación. Incluye garantía y soporte.</p>
-        <span class="precio">S/ 10 soles</span>
+        <h2>Crunchyroll MegaFan - Completa</h2>
+        <p>Disfruta anime sin anuncios, lista para reventa y renovación.</p>
+        <span class="precio">S/10</span>
       </div>
-
-      <!-- Agrega más productos aquí -->
+      <div class="producto">
+        <img src="paramount.jpg" alt="Paramount+" />
+        <h2>Paramount+ - Completa</h2>
+        <p>Cuenta completa lista para disfrutar contenido exclusivo.</p>
+        <span class="precio">S/10</span>
+      </div>
+      <div class="producto">
+        <img src="prime.png" alt="Amazon Prime" />
+        <h2>Amazon Prime - Completa</h2>
+        <p>Cuenta lista para reventa, incluye Prime Video y más.</p>
+        <span class="precio">S/12</span>
+      </div>
+      <div class="producto">
+        <img src="prov.png" alt="Disney+" />
+        <h2>Disney+ Estándar - Completa</h2>
+        <p>Todo el contenido de Disney, Pixar, Marvel y más.</p>
+        <span class="precio">S/16</span>
+      </div>
+      <div class="producto">
+        <img src="netflix.jpg" alt="Netflix" />
+        <h2>Netflix 4K Premium - Completa</h2>
+        <p>Cuenta 4K premium con 4 dispositivos simultáneos.</p>
+        <span class="precio">S/35</span>
+      </div>
     </div>
   </section>
 
@@ -204,5 +230,6 @@
       <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
     </div>
   </footer>
+
 </body>
 </html>
